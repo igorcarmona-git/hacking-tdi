@@ -1,0 +1,49 @@
+------------------- Conhecer --------------------------
+Ter bastante organização, utiliza-se o Notion para facilitar.
+
+Primeiro passo durante o Pentest:
+ 	Você pode ler o código fonte do site (descobrir tecnologias usadas, ler comentários, ver páginas usadas, etc) e
+	ou automatizar esse processo utilizando "whatweb" no Kali. ANOTAR TUDO
+	No "whatweb", você consegue info como: IP, Servidor, localização do servidor, software, frameworks, versões das
+	tecnologias e etc.
+
+	Você pode usar o PORT SCANNING para verificar as portas abertas no servidor, cada porta tem um serviço/comunica
+	ção, ferramenta: NMAP -A [IP]. Para utilizar o nmap você deve descobrir um IP.
+
+	Caso tenha alguma aplicação web, ex: apache, você pode tentar encontrar diretórios no site/IP, você vai precisar
+	de uma wordlist e uma ferramenta para testar a wordlist no alvo. No Kali, existe uma wordlist pronta acessando
+	no shell: cd/usr/share/wordlists/dirbuster. Terá várias listas, recomenda-se começar com directory-list-2.3-
+	medium.txt. Voce pode usar a ferramenta "gobuster", gobuster dir -u [url] -w [list] -t [requisições] 100
+	
+
+Segundo passo:
+	Você pode listar as funcionalidades da página, por exemplo: Clicar na pesquisa, clicar nas abas, clicar nos 
+	serviços e analisar seu comportamento, pois pode haver falhas. ANOTAR TUDO
+
+	Obs: Cada subdominio tem um sistema e geralmente as falhas estão nos sistemas dos subdominios. A ferramenta
+	"Subfinder" ajuda a descobrir todos os subdominios do seu alvo.
+	Você pode automatizar por completo essa análise dos subdominios utilizando a ferramenta: AQUATONE. Ele faz um
+	mapa completdos subdominios e suas descrições.
+
+Terceiro passo:
+	Agora você precisa analisar os subdominios, utilizando SCANNERS (ferramenta, base de dados que sabe várias
+	falhas), ele pega o alvo e verifica no banco de dados se existe essa falha no alvo.
+	Ex: wpscan (scanner de wordpress falhas).
+	
+	Tudo o que você encontrar de versões desatualizadas, você pode buscar o exploit (possível ameaça, vazamento, 
+	senha) e colidir a ameaça com a vulnerabilidade e explorar.
+
+1:50h aula 4
+
+------------------------ ATACAR---------------------------
+
+Escalação de previlégio:	Díficilmente quando você entrar em um sistema voce vai ter acesso ao root, para ter
+				acesso ao root, utilizamos a técnica de escalação de previlégio.
+				
+				Consiste em explorar executáveis que você consegue executar como root, por exemplo:
+				Voce tem algum arquivo executável no sistema que tem uma rotina com permissão de root
+				que você consegue editar este arquivo.
+				
+				$ sudo -l (Verifica o que você pode executar como root na máquina)
+				Site manual de escalação de previlégios: GTFOBins (onde fica todos os executáveis do 
+				linux).

@@ -1,0 +1,62 @@
+- Site que você pode pesquisar por senhas padrões de dispositivos:
+https://www.shodan.io
+
+-------------------------------------------------------------------------------------------------------
+- Ataque MAC Spoof:	Todo dispositivo é identificado pelo IP e MAC Address, esse ataque funciona como 
+			se um usuário comum conectado a uma rede pública, o hacker ao conectar também 
+			tem um MAC Address, ele pega o MAC do usuário comum e sequestra para ele, e 
+			derruba da rede o usuário comum.
+
+Posso ser hackeado conectado a um wifi publico? Sim.
+	Principais ataques:
+
+- Telas de login fakes: Ao invés de ver ser redirecionado para tela de login de um hotel por exemplo, 
+			voce ser direcionado para uma tela falsa onde o hacker consegue roubar as
+			info de login sua.
+
+- Trafego da rede: 	Quando você conecta na rede, todos os dados passam pelo roteador. Alguns são
+			criptografados e outros não (podem ser interceptados por hackers), ferramenta
+			que faz isso: Whireshark.
+			Sites que não possuem HTTPS, o hacker consegue viasualizar o que vc faz no site.
+			PROTEÇÂO: Utilizar VPN, programa que ofusca seu IP real.
+---------------------------------------------------------------------------------------------------------
+
+Domain Look-Alike: 	Técnica para roubar dados que consiste em enganar as pessoas com páginas falsas
+			com nomes de domínios parecidos com os reais. Ex: TRUE -> amazon.com 
+									  FALSE -> amazom.com
+
+---------------------------------------------------------------------------------------------------------
+
+Coletar e-mails: 	Você pode coletar eles através de Google Hacking, TheHarvester (kali) e Hunter.io
+			O site dehashed.com é um banco de dados de emails vazados e suas senhas.
+
+---------------------------------------------------------------------------------------------------------
+
+Falha de IDOR:		Você pode mudar a URL para tentar buscar essas falhas, esse tipo de falha permite
+			você acessar URLs que não devia ter autorização.
+---------------------------------------------------------------------------------------------------------
+
+Web Hacking: 		Consiste em bypassar a entrada de dados pelo filtro de um site para quebrar 
+			protocolos de segurança. Voce pode usar a ferramenta "BurpSuite" para aplicar 
+			a técnica de Double Encoding, existe uma tabela de possibilidades (Open Redirect 
+			Cheat Sheet).
+---------------------------------------------------------------------------------------------------------
+
+CVE:			No exploit-db tem um número identificador de determinada falha.
+
+---------------------------------------------------------------------------------------------------------
+
+
+Escalação de previlégio: Díficilmente quando você entrar em um sistema voce vai ter acesso ao root, para 
+			 ter acesso ao root, utilizamos a técnica de escalação de previlégio.
+				
+			 Consiste em explorar executáveis que você consegue executar como root, por 
+			 exemplo: Voce tem algum arquivo executável no sistema que tem uma rotina com 
+			 permissão de root que você consegue editar este arquivo.
+
+			 $ sudo -l (Verifica o que você pode executar como root na máquina)
+			 Site manual de escalação de previlégios: GTFOBins (onde fica todos os 
+ 			 executáveis do linux)
+
+
+			

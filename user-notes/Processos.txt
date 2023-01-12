@@ -33,8 +33,6 @@ Terceiro passo:
 	Tudo o que você encontrar de versões desatualizadas, você pode buscar o exploit (possível ameaça, vazamento, 
 	senha) e colidir a ameaça com a vulnerabilidade e explorar.
 
-1:50h aula 4
-
 ------------------------ ATACAR---------------------------
 
 Escalação de previlégio:	Díficilmente quando você entrar em um sistema voce vai ter acesso ao root, para ter

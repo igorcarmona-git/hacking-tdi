@@ -1,6 +1,11 @@
 ------------------- Conhecer --------------------------
 Ter bastante organização, utiliza-se o Notion para facilitar.
 
+Recon --> Conhecer o alvo e encontrar diretórios e subdomínios, aumenta o escopo de ataque.
+Wordlist/SecList --> Há diversas listas que você pode usar para tentar achar diretórios/subdomínios/senhas.
+
+O navegador faz requisições ao servidor para saber se uma página existe ou não via HTTP Status Codes.
+
 Primeiro passo durante o Pentest:
  	Você pode ler o código fonte do site (descobrir tecnologias usadas, ler comentários, ver páginas usadas, etc) e
 	ou automatizar esse processo utilizando "whatweb" no Kali. ANOTAR TUDO
@@ -15,7 +20,6 @@ Primeiro passo durante o Pentest:
 	no shell: cd/usr/share/wordlists/dirbuster. Terá várias listas, recomenda-se começar com directory-list-2.3-
 	medium.txt. Voce pode usar a ferramenta "gobuster", gobuster dir -u [url] -w [list] -t [requisições] 100
 	
-
 Segundo passo:
 	Você pode listar as funcionalidades da página, por exemplo: Clicar na pesquisa, clicar nas abas, clicar nos 
 	serviços e analisar seu comportamento, pois pode haver falhas. ANOTAR TUDO
@@ -23,7 +27,7 @@ Segundo passo:
 	Obs: Cada subdominio tem um sistema e geralmente as falhas estão nos sistemas dos subdominios. A ferramenta
 	"Subfinder" ajuda a descobrir todos os subdominios do seu alvo.
 	Você pode automatizar por completo essa análise dos subdominios utilizando a ferramenta: AQUATONE. Ele faz um
-	mapa completdos subdominios e suas descrições.
+	mapa completo dos subdominios e suas descrições.
 
 Terceiro passo:
 	Agora você precisa analisar os subdominios, utilizando SCANNERS (ferramenta, base de dados que sabe várias

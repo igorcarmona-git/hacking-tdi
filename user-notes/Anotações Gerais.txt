@@ -1,6 +1,9 @@
 - Site que você pode pesquisar por senhas padrões de dispositivos:
 https://www.shodan.io
 
+- Site que você pode pesquisar por metadatas de arquivos:
+EXIF.Tools
+
 -------------------------------------------------------------------------------------------------------
 HTTP responde status codes:
 	Informational responses (100 - 199)
